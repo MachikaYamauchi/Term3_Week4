@@ -1,4 +1,4 @@
-export interface Products {
+export interface Recommend {
   carousel:string;
   image1:string;
   image2:string;
