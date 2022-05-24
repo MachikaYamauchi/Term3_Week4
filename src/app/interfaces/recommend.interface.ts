@@ -1,5 +1,5 @@
 export interface Recommend {
-  carousel:string;
+  id:number;
   image1:string;
   image2:string;
   image3:string;
@@ -9,4 +9,5 @@ export interface Recommend {
   stock:number;
   alt:string;
   description:string
+  display:any
 }

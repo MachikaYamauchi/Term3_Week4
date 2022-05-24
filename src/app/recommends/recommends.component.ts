@@ -10,6 +10,8 @@ import { RecommendServiceService } from '../services/recommend-service.service';
 export class RecommendsComponent implements OnInit {
 
   recommendJSON:Recommend[] =[];
+  display:any = false;
+  displayProduct = "block";
 
   isLessStock(stockNumber:number) {
     if(stockNumber < 10) {
@@ -30,7 +32,8 @@ export class RecommendsComponent implements OnInit {
   constructor(private recoHttp:RecommendServiceService) { }
 
   ngOnInit(): void {
-    this.recoHttp.getReccomendFromServer().subscribe((recommend) => {
+    this.recoHttp.showProduct().subscribe((recommend) => {
+      console.log(recommend);
       this.recommendJSON = recommend;
     })
   }
